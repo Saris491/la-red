@@ -1,0 +1,204 @@
+$icon-offset: 5px;
+
+.activity-section {
+  background-color: $section-bg-grey;
+  height: 100%;
+  padding: $pd-desktop;
+  width: 100%;
+
+  @include flex(flex-start, flex-start, column, nowrap);
+
+  @include respond-up($xl) {
+    padding: $pd-xl;
+  }
+
+  @include respond-down($md-m) {
+    padding: $pd-tablet;
+  }
+
+  @include respond-down($sm) {
+    padding: $pd-mobile;
+  }
+
+  .section-title {
+    height: auto;
+    margin-bottom: 1em;
+    width: 100%;
+
+    @extend %flex-center;
+
+    @include respond-down($md) {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__list {
+    height: auto;
+    margin: 0 auto 5em;
+    width: 100%;
+
+    @include flex(center, flex-start, row, nowrap);
+
+    @include respond-up($xl) {
+      max-width: $max-container-width;
+    }
+
+    @include respond-down($lg) {
+      @include flex(space-around, center, row, wrap);
+    }
+
+    @include respond-down($sm-m) {
+      margin: 0 auto 3em;
+      @include flex(flex-start, center, column, nowrap);
+    }
+
+    &-item {
+      height: 100%;
+      padding: 2em;
+      position: relative;
+      width: 25%;
+
+      @include flex(flex-start, center, column, nowrap);
+
+      &:first-child {
+        margin-left: 0;
+
+        @include respond-down($lg) {
+          margin: 0;
+        }
+
+        @include respond-down($sm-m) {
+          @include respond-up($sm) {
+            margin-bottom: 1em;
+          }
+        }
+
+        img {
+          height: calc(65 + #{$icon-offset})px;
+          width: calc(65 + #{$icon-offset})px;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-bottom: $icon-offset;
+
+        @include respond-down($lg) {
+          margin-bottom: 0;
+        }
+
+        @include respond-down($sm-m) {
+          margin-bottom: 1em;
+        }
+
+        @include respond-down($sm) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
+        @include respond-down($sm-m) {
+          margin: 0;
+        }
+      }
+
+      &:hover {
+        background: $white;
+        box-shadow: $card-shadow;
+        cursor: pointer;
+
+        .external-link-icon {
+          animation: move-right-left 1s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          color: $asphalt;
+          height: 31px;
+          top: 1em;
+          right: 1.5em;
+          visibility: visible;
+          width: 31px;
+          z-index: 10;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      @include respond-up($xl) {
+        padding: 3em;
+      }
+
+      @include respond-down($lg) {
+        height: auto;
+        justify-content: space-around;
+        margin-bottom: 5em;
+        max-width: 450px;
+        width: 50%;
+      }
+
+      @include respond-down($sm-m) {
+        margin-bottom: 1em;
+        padding: 3em 1em;
+        width: 90%;
+      }
+
+      img {
+        height: 65px;
+        width: 65px;
+      }
+
+      .external-link-icon {
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+        ;
+      }
+
+      .item-title {
+        margin: 1em 0 0;
+        text-align: center;
+        width: 100%;
+
+        @include rem(font-size, 15px);
+
+        @include respond-down($lg) {
+          @include respond-up($md-m) {
+            height: auto;
+            hyphens: auto;
+          }
+        }
+
+        @include respond-down($sm) {
+          height: auto;
+          hyphens: auto;
+        }
+      }
+
+      .dividing-line {
+        @include respond-down($sm-m) {
+          width: 211px;
+        }
+      }
+
+      .item-content {
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+
+        @include respond-down($sm-m) {
+          width: 90%;
+        }
+
+        @include respond-down($sm) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__button {
+    height: auto;
+    width: 100%;
+
+    @extend %flex-center;
+  }
+}

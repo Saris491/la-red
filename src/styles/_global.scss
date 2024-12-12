@@ -1,0 +1,27 @@
+@import './_bootstrap.min.css';
+@import './animations';
+@import './config';
+@import './extends';
+@import './mixins';
+@import './variables.module.scss';
+
+// Components
+@import './components/banner';
+@import './components/buttons';
+@import './components/forms';
+@import './components/header';
+@import './components/hero';
+@import './components/footer';
+@import './components/menu-icon';
+@import './components/content-section';
+@import './components/activity-section';
+
+// Modals
+@import './modals/modal';
+
+// Pages
+@import './pages/page';
+@import './pages/home';
+@import './pages/activiteiten';
+@import './pages/auth-pages';
+@import './pages/over-ons';

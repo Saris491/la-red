@@ -1,0 +1,126 @@
+.about {
+  height: auto;
+  width: 100%;
+
+  @include flex(flex-start, flex-start, column, nowrap);
+
+  &__hero {
+    width: 100%;
+
+    >.hero__container-content {
+      margin-bottom: -50px;
+    }
+  }
+
+  &__content {
+    height: auto;
+    margin: 0 auto;
+    max-width: $max-content-width;
+    padding: 6em 0 8em;
+    width: 50%;
+
+    @include flex(center, center, column, nowrap);
+
+    @include respond-down($lg) {
+      padding: $pd-desktop;
+      width: 60%;
+    }
+
+    @include respond-down($md-m) {
+      padding: $pd-tablet;
+      width: 70%;
+    }
+
+    @include respond-down($md) {
+      width: 80%;
+    }
+
+    @include respond-down($sm-m) {
+      padding: $pd-mobile;
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      width: 100%;
+    }
+
+    .quote {
+      margin: 2em 0;
+      width: 100%;
+
+      h3 {
+        font-weight: $regular;
+        text-align: center;
+        font-style: italic;
+        margin: 0 auto;
+        max-width: 770px;
+
+        @include rem(font-size, 18px);
+      }
+
+      .dividing-line {
+        margin: 1.5em auto 0;
+        width: 87%;
+      }
+    }
+  }
+
+  &__image {
+    height: 450px;
+    margin: 0 auto 6em;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+
+    @include respond-up($lg-m) {
+      height: 500px;
+    }
+
+    @include respond-up($xl) {
+      height: 600px;
+    }
+
+    img {
+      height: auto;
+      position: absolute;
+      top: -120%;
+      left: -15%;
+      width: 130%;
+      transition: all .3s ease-in-out;
+
+      @include respond-down($lg) {
+        top: -88%;
+      }
+
+      @include respond-down($md-m) {
+        top: -77%;
+        left: -20%;
+        width: 140%;
+      }
+
+      @include respond-down($md) {
+        top: -72%;
+        left: -25%;
+        width: 150%;
+      }
+
+      @include respond-down($sm-m) {
+        top: -75%;
+        left: -65%;
+        width: 210%;
+      }
+
+      @include respond-down($sm) {
+        height: 100%;
+        left: -150px;
+        top: 0;
+        width: auto;
+      }
+    }
+  }
+
+  #footer {
+    margin-top: 7em;
+  }
+}

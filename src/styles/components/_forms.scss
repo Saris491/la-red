@@ -1,0 +1,67 @@
+.form {
+  &__group {
+    @include flex(flex-start, flex-start, column, nowrap);
+
+    input {
+      @include rem(font-size, 10px);
+      font-family: $main-font;
+    }
+
+    &.outline {
+      input {
+        background-color: transparent;
+        border: 1px solid $black;
+        border-radius: 5px;
+        color: $black;
+        padding: 10px;
+
+        &::placeholder {
+          color: $black-2;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      &--white {
+        input {
+          border-color: $white;
+          color: $white;
+
+          &::placeholder {
+            color: $grey-6;
+          }
+        }
+
+        .form__error {
+          color: $white;
+        }
+      }
+
+      a {
+        @include rem(font-size, 8px);
+
+        margin: 10px 0 0 10px;
+      }
+    }
+  }
+
+  &__error {
+    @include rem(font-size, 8px);
+    margin: 10px 0 0 auto;
+  }
+
+  &__submit {
+    margin-left: auto;
+  }
+
+  &__btn-area {
+    @include flex(flex-end, center, row, nowrap);
+
+    button {
+      margin-left: 20px;
+    }
+  }
+}

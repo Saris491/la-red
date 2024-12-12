@@ -1,0 +1,112 @@
+// Media breakpoints
+$xs: 380px;
+$sm: 600px;
+$sm-m: 800px;
+$md: 1024px;
+$md-m: 1200px;
+$lg: 1440px;
+$lg-m: 1600px;
+$xl: 1800px;
+
+// Typography
+$main-font: 'Open Sans', sans-serif;
+$title-font: 'Roboto Mono', monospace;
+$secondary-font: 'Roboto Slab', serif;
+
+$light: 300;
+$regular: 400;
+$semi-bold: 700;
+$bold: 900;
+
+$fs-base: 10px;
+$fs-1: 32px;
+$fs-2: 22px;
+$fs-3: 16px;
+$fs-4: 14px;
+$fs-5: 12px;
+
+$icon-lg: 28px;
+$icon-md: 20px;
+$icon-sm: 14px;
+
+// Colors
+$primary-color: #54a0ff;
+$primary-dark: #2e86de;
+$secondary-color: #fbb57c;
+$secondary-dark: #F99171;
+$red: #E73C3E;
+
+$black: #131211;
+$black-2: #252220;
+$black-3: #141717;
+$asphalt: #313638;
+$medium-grey: #d5d8da;
+$grey: #E6EAED;
+$section-bg-grey: #F9F9F9;
+$middle-grey: lighten($grey, 2%);
+$light-grey: lighten($grey, 8%);
+$grey-1: rgba(255, 255, 255, .1);
+$grey-2: rgba(255, 255, 255, .2);
+$grey-3: rgba(255, 255, 255, .3);
+$grey-4: rgba(255, 255, 255, .4);
+$grey-5: #f3f3f3;
+$grey-6: rgba(255, 255, 255, .6);
+$grey-7: rgba(255, 255, 255, .7);
+$grey-8: rgba(255, 255, 255, .8);
+$white: #ffffff;
+$white-2: #f3f3f3;
+$gold: #cc933c;
+$red: #e74c3c;
+
+$text-black: $black;
+$text-grey: #A8A8A8;
+
+// Gradients
+$l-gradient-1: linear-gradient(90deg, rgba(223,112,77,1) 0%, rgba(59,59,189,1) 100%, rgba(0,212,255,1) 100%);
+$l-gradient-2: linear-gradient(90deg, rgba(77,221,223,1) 0%, rgba(180,59,189,1) 100%, rgba(0,212,255,1) 100%);
+$l-gradient-3: linear-gradient(90deg, rgba(77,221,223,1) 0%, rgba(59,59,189,1) 100%, rgba(0,212,255,1) 100%);
+$l-gradient-4: linear-gradient(90deg, rgba(77,223,156,1) 0%, rgba(254,137,238,1) 100%, rgba(180,59,189,1) 100%);
+$l-gradient-5: linear-gradient(90deg, rgba(129,244,251,1) 0%, rgba(245,116,243,1) 100%);
+// Brands
+$skype: #00aff0;
+$whatsapp: #25D366;
+
+// Borders
+$transparent-border: rgba(248, 251, 255, .46);
+$asphalt-border: #525556;
+$grey-border: lighten($text-grey, 17%);
+
+// Shadows
+$card-shadow: 0 3px 10px 4px rgba(63, 66, 68, .07);
+$card-shadow-dark: 0 3px 10px 4px rgba(0, 0, 0, .15);
+$sidebar-shadow: 1px 3px 10px 4px rgba(63, 66, 68, .07);
+$toolbar-shadow: 10px 3px 10px 4px rgba(63, 66, 68, .07);
+$toolbar-shadow-dark: 8px 2px 15px 7px rgba(0, 0, 0, .4);
+$round-btn-shadow: 0 3px 10px 4px rgba(63, 66, 68, .5);
+$gold-glow: 0 3px 10px 4px rgba(219, 153, 105,.43);
+
+// Global measurements
+$header-height: 100px;
+$header-height-s: 60px;
+$footer-height: 330px;
+$footer-height-s: 100vh;
+
+$max-content-width: 1440px;
+$max-container-width: 1640px;
+
+$pd-xxl: 140px 140px;
+$pd-xl: 120px 100px;
+$pd-desktop: 140px 80px 120px;
+$pd-tablet: 140px 32px 100px;
+$pd-mobile: 80px 16px;
+$pd-mobile-x: 16px;
+
+// Cards
+$list-card-height: 440px;
+$list-card-width: 330px;
+
+// Z indexes
+$z-negative: -5;
+$z-0: 0;
+$z-base: 1;
+$z-menu-overlay: 16;

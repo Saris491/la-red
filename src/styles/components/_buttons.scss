@@ -1,0 +1,190 @@
+a,
+button {
+  font-family: $main-font;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+}
+
+a,
+.btn-text {
+  color: $black;
+  text-decoration: none;
+  font-weight: $semi-bold;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @include rem(font-size, $fs-base);
+
+  &.no-wrap {
+    white-space: nowrap;
+  }
+
+  &.border-animation {
+    letter-spacing: 1px;
+    position: relative;
+
+    &::after {
+      border-bottom: 1.2px solid transparent;
+      border-radius: .5px;
+      bottom: -5px;
+      content: "";
+      height: 2px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      transition: all .3s ease-in-out;
+      width: 0;
+    }
+
+    &.g1 {
+      &::after {
+        background: $secondary-color;
+      }
+    }
+
+    &.g2 {
+      &::after {
+        background: $l-gradient-2;
+      }
+    }
+
+    &.g3 {
+      &::after {
+        background: $l-gradient-3;
+      }
+    }
+
+    &.g4 {
+      &::after {
+        background: $l-gradient-4;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        left: 0;
+        opacity: 1;
+        pointer-events: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+button.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  @include rem(font-size, 11px);
+
+  &-primary {
+    border: 2px solid $black;
+    color: $black;
+    cursor: pointer;
+    font-weight: $semi-bold;
+    padding: 15px 50px;
+    transition: all .3s ease-in-out;
+
+    @include respond-down($md) {
+      padding: 12px 50px;
+    }
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: $black;
+      border: 2px solid $black;
+      color: $white;
+    }
+
+    &.icon {
+      @include flex(center, center, row, nowrap);
+
+      i {
+        height: 12px;
+        margin: 0 0 0 15px;
+        position: relative;
+        top: -1px;
+        transform: translateX(0);
+        transition: transform .3s ease-in-out;
+        width: 12px;
+      }
+
+      &:hover:not(:disabled) {
+        i {
+          transform: translateX(30px);
+        }
+      }
+    }
+
+    &.white {
+      border: 2px solid $white !important;
+      color: $white;
+
+      &:hover:not(:disabled),
+      &:focus:not(:disabled) {
+        background-color: $white;
+        border: 2px solid $white;
+        color: $black;
+      }
+
+      i {
+        fill: $white;
+      }
+      
+    }
+  }
+
+  &-sm {
+    @include rem(font-size, 9px);
+    border-width: 2px !important;
+    padding: 12px 15px;
+
+    &:hover {
+      border-width: 2px !important;
+    }
+  }
+
+  &-text {
+    @include rem(font-size, 9px);
+
+    font-weight: 500;
+  }
+
+  &:disabled {
+    background-color: transparent;
+  }
+}
+
+a, button {
+  font-family: $main-font;
+
+  &.text-link {
+    background: none;
+    border: none;
+    outline: none;
+
+    &::after {
+      background: $black;
+      bottom: -4px;
+      content: '';
+      height: 2px;
+      right: 10%;
+      position: absolute;
+      width: 0;
+      transition: all .33s ease;
+    }
+
+    &:hover {
+      &::after {
+        left: 10%;
+        width: 80%;
+      }
+    }
+  }
+}
