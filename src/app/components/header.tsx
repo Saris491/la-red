@@ -61,7 +61,7 @@ export default function Header() {
 
   function checkForClassesToAdd(classes: string[]) {
     if (!classes) return;
-    setIsBlack( _.includes(classes, 'non-transparent'));
+    setIsBlack(_.includes(classes, 'non-transparent'));
   }
 
   function checkIfTransparent() {
@@ -166,47 +166,12 @@ export default function Header() {
 
   return (
     <header ref={topNav} className={`header ${isLoading ? 'hidden' : ''}`}>
-      <div className={`${menuClasses.join(' ')}`}>
-        <div className="navigation__menu-btn">
-          <button name="Menu button" aria-label="Click to open menu" onClick={() => setShowMenu(!showMenu)}>
-            <MenuIcon menuActive={showMenu} isBlack={isBlack}/>
-          </button>
-        </div>
-        <div className={`navigation__logo ${showMenu ? 'active' : ''}`}>
-          {isHomepage ? (
-            <>
-              <Image priority={true} className={`${isBlack ? 'hidden' : ''}`} width="250" height="80" src="/svgs/logo.svg" alt="Bruur Culinair logo" draggable="false" />
-              <Image priority={true} className={`${!isBlack ? 'hidden' : ''}`} width="250" height="80" src="/svgs/logo__black.svg" alt="Black Bruur Culinair logo" draggable="false" />
-            </>
-          ) : (
-            <Link href="/" aria-label="Link to home" onClick={(() => {setShowMenu(false);})}>
-              <Image priority={true} className={`${isBlack ? 'hidden' : ''}`} width="250" height="80" src="/svgs/logo.svg" alt="Bruur Culinair logo" draggable="false" />
-              <Image priority={true} className={`${!isBlack ? 'hidden' : ''}`} width="250" height="80" src="/svgs/logo__black.svg" alt="Black Bruur Culinair logo" draggable="false" />
-            </Link>
-          )}
-        </div>
-        <nav className={`navigation__social ${showMenu || isBlack ? 'active' : ''}`}>
-          {!user && (
-            <>
-              <a href="https://www.instagram.com/bruur.culinair/" className="icon-btn" 
-                aria-label="Link to Instagram profile" target="_blank" rel="noopener">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.facebook.com/BRUUR-Culinair-103068201267850/" className="icon-btn not-mobile" aria-label="Link to LinkedIn profile" target="_blank" rel="noopener">
-                <i className="fab fa-facebook-square"></i>
-              </a>
-            </>
-          )}
-
-          {user && (
-            <Button className={`logout-btn ${(showMenu || isBlack) ? '' : 'white'}`} aria-label="Logout button"
-              onClick={logout} variant="primary" size="sm">
-              Uitloggen
-            </Button>
-          )}
-        </nav>
+      <div className="navigation__menu-btn">
+        <button name="Menu button" aria-label="Click to open menu" onClick={() => setShowMenu(!showMenu)}>
+          <MenuIcon menuActive={showMenu} isBlack={isBlack} />
+        </button>
       </div>
-  
+
       <div className={`menu-overlay ${showMenu ? 'active' : ''}`}>
         <nav className="menu">
           <ul className="menu__list" data-offset="10">

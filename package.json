@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-kevin",
+  "name": "portfolio-red",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "axios": "^1.6.0",
     "formik": "^2.4.5",
-    "next": "14.0.1",
+    "next": "^15.1.0",
     "react": "^18",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18",
@@ -24,12 +24,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vercel/blob": "^0.15.1",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
     "lodash": "^4.17.21",
-    "postcss": "^8",
+    "postcss": "^8.4.49",
     "sass": "^1.69.5",
+    "tailwindcss": "^3.4.16",
     "typescript": "^5"
   }
 }

@@ -7,8 +7,8 @@ import Header from "./components/header";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Portfolio Kevin | Home',
-  description: 'Personal Portfolio of Kevin Atsma (full-stack developer & designer)',
+  title: 'Portfolio Red | Home',
+  description: 'Personal Portfolio of Red Jules',
 };
 
 export default function RootLayout({
@@ -36,37 +36,40 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
         <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#313638" />
         <link rel="shortcut icon" href="/favicons/favicon.ico" />
-        <meta name="apple-mobile-web-app-title" content="Portfolio Kevin Atsma" />
-        <meta name="application-name" content="Portfolio Kevin Atsma" />
+        <meta name="apple-mobile-web-app-title" content="Portfolio Red" />
+        <meta name="application-name" content="Portfolio Red" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
 
         {/* Social Meta tags */}
         {/* Twitter Card data */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@kevin-atsma" />
-        <meta name="twitter:title" content="Portfolio Kevin Atsma" />
-        <meta name="twitter:description" content="Personal Portfolio of Kevin Atsma (full-stack developer & designer)" />
+        {/* // TODO: THIS */}
+        <meta name="twitter:site" content="@la-red" />
+        <meta name="twitter:title" content="Portfolio Red" />
+        <meta name="twitter:description" content="Personal Portfolio of Red" />
         <meta name="twitter:image" content="/img/social/social-image.jpg" />
 
         {/* Open Graph data */}
-        <meta property="og:title" content="Portfolio Kevin Atsma" />
+        <meta property="og:title" content="Portfolio Red" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.kevinatsma.com/" />
+        {/* // TODO: THIS */}
+        {/* <meta property="og:url" content="https://www.kevinatsma.com/" /> */}
         <meta property="og:image" content="/img/social/social-image.jpg" />
-        <meta property="og:description" content="Personal Portfolio of Kevin Atsma (full-stack developer & designer)" />
-        <meta property="og:site_name" content="Portfolio Kevin Atsma" />
-        <meta property="og:locale" content="nl_NL" />
+        <meta property="og:description" content="Personal Portfolio of Red" />
+        <meta property="og:site_name" content="Portfolio Red" />
+        <meta property="og:locale" content="en_US" />
 
-        <link rel="shortlink" href="https://www.kevinatsma.com/" />
-        <link rel="canonical" href="https://www.kevinatsma.com/" />
+        {/* // TODO: THIS */}
+        {/* <link rel="shortlink" href="https://www.kevinatsma.com/" />
+        <link rel="canonical" href="https://www.kevinatsma.com/" /> */}
       </head>
 
       <body className={inter.className}>
         <Toaster toastOptions={{
           duration: 8000,
           style: { maxWidth: "90vw" }
-        }}/>
+        }} />
         <Header />
         {children}
       </body>
